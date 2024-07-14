@@ -9,15 +9,12 @@ RUN npm install
 
 ENV DB_CONN_STRING="mongodb://root:MongoDB2019!@mongo:27017/"
 ENV DB_NAME="restaurante_db"
-ENV CART_COLLECTION_NAME="cart"
 ENV ORDER_COLLECTION_NAME="order"
-ENV PRODUCT_COLLECTION_NAME="produtos"
-ENV USER_COLLECTION_NAME="user"
 ENV URL="http://localhost:8000"
 
 COPY ./dist/ /usr/src/app/dist
 COPY .env /usr/src/app
 
-EXPOSE 8000
+EXPOSE 5000
 
 CMD ["npm", "start"]

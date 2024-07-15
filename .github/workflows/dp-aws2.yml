@@ -49,11 +49,11 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-        npx sonarqube-scanner
-          -Dsonar.projectKey=orderservice
-          -Dsonar.organization=jessicasalmeida
-          -Dsonar.sources=.
-          -Dsonar.host.url=https://sonarcloud.io
+         npx sonarqube-scanner \
+          -Dsonar.projectKey=orderservice \
+          -Dsonar.organization=jessicasalmeida \
+          -Dsonar.sources=. \
+          -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
     - name: Build, tag, and push image to Amazon ECR

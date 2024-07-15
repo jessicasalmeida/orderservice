@@ -50,7 +50,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
          npx sonarqube-scanner \
-          -Dsonar.projectKey=orderservice \
+          -Dsonar.projectKey=jessicasalmeida_orderservice \
           -Dsonar.organization=jessicasalmeida \
           -Dsonar.sources=. \
           -Dsonar.host.url=https://sonarcloud.io \
